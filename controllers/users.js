@@ -33,9 +33,10 @@ var router = express.Router();
  * @summary GET 测试
  * @group 测试
  * @returns {object} 200 - 返回 world
+ * @security JWT
  */
 router.get('/hello', (req, res) => {
-  res.send('world')
+  res.send('hello world!')
 })
 
 module.exports = router;
