@@ -44,4 +44,4 @@ routers.SetRouters(app)
 var config = require('./config/index').getConfig()
 // 引入http服务中间件
 const http = require('http')
-http.createServer(app).listen(config.port, () => console.log(`http webapi at :http://localhost:${config.port}`))
+http.createServer(app).listen(config.port, () => console.log(`http webapi at http://localhost:${config.port}`))

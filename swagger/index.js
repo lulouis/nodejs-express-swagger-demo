@@ -8,22 +8,21 @@ const swaggerConfig = {
             version: '1.0.0',
         },
         produces: [
-            "application/json",
-            "application/xml"
+            'application/json',
+            'application/xml'
         ],
         schemes: ['http', 'https'],
         securityDefinitions: {
             JWT: {
-                type: 'apiKey',
-                in: 'header',
-                name: 'Authorization',
-                description: '',
+                'type': 'oauth2',
+                'flow': 'password',
+                'tokenUrl': '/authenticate'
             }
         }
     },
     route: {
-        url: "/swagger", // 访问swagger的地址
-        docs: "/swagger.json" //swagger文件 api
+        url: '/swagger', // 访问swagger的地址
+        docs: '/swagger.json' //swagger文件 api
     },
     basedir: __dirname,
     files: [
